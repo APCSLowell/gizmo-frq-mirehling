@@ -5,39 +5,46 @@ public class OnlinePurchaseManager
   * instantiated in the constructor.
   */
   private ArrayList<Gizmo> purchases;
+
+  public void add(Gizmo g)
+  {
+    purchases.add(g);
+  }
   
   /** Returns the number of purchased Gizmo objects that are electronic
   * whose manufacturer is maker, as described in part (a).
   */
   public int countElectronicsByMaker(String maker)
-{
-int result = 0;
-for (Gizmo g : purchases)
-{
-if (g.getMaker().equals(maker) && g.isElectronic())
-{
-result++;
-}
-}
-return result;
-}
+  {
+  int result = 0;
+  for (Gizmo g : purchases)
+  {
+    if (g.getMaker().equals(maker) && g.isElectronic())
+    {
+      result++;
+    }
+  }
+    return result;
+  }
   
   /** Returns true if any pair of adjacent purchased Gizmo objects are
   * equivalent, and false otherwise, as described in part (b).
   */
   public boolean hasAdjacentEqualPair()
-{
-Gizmo g1 = purchases.get(0);
-for (int pos = 1; pos < purchases.size(); pos++)
-{
-Gizmo g2 = purchases.get(pos);
-if (g1.equals(g2))
-{
-return true;
+  {
+  Gizmo g1 = purchases.get(0);
+  for (int pos = 1; pos < purchases.size(); pos++)
+  {
+    Gizmo g2 = purchases.get(pos);
+    if (g1.equals(g2))
+    {
+      return true;
+    }
+  g1 = g2;
+  }
+    return false;
+  } 
 }
-g1 = g2;
-}
-return false;
-} 
-}
+
+
   

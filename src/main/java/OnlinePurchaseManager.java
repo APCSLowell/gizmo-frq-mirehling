@@ -4,7 +4,7 @@ public class OnlinePurchaseManager
   /** An ArrayList of purchased Gizmo objects,
   * instantiated in the constructor.
   */
-  private ArrayList<Gizmo> purchases;
+  private ArrayList<Gizmo> purchases = new ArrayList <Gizmo>();
 
   public void add(Gizmo g)
   {

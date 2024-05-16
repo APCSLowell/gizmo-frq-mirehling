@@ -26,9 +26,20 @@ return result;
   * equivalent, and false otherwise, as described in part (b).
   */
   public boolean hasAdjacentEqualPair()
-  {
-    /* to be implemented in part (b) */
-  }
+{
+Gizmo g1 = purchases.get(0);
+for (int pos = 1; pos < purchases.size(); pos++)
+{
+Gizmo g2 = purchases.get(pos);
+if (g1.equals(g2))
+{
+return true;
+}
+g1 = g2;
+}
+return false;
+} 
+}
   public OnlinePurchaseManager()
   {
     purchases = new ArrayList <Gizmo>();

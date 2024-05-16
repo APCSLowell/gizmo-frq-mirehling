@@ -40,12 +40,4 @@ g1 = g2;
 return false;
 } 
 }
-  public OnlinePurchaseManager()
-  {
-    purchases = new ArrayList <Gizmo>();
-  }
-  public void add(Gizmo g)
-  {
-    purchases.add(g);
-  }
-}
+  

@@ -10,9 +10,17 @@ public class OnlinePurchaseManager
   * whose manufacturer is maker, as described in part (a).
   */
   public int countElectronicsByMaker(String maker)
-  {
-    /* to be implemented in part (a) */
-  }
+{
+int result = 0;
+for (Gizmo g : purchases)
+{
+if (g.getMaker().equals(maker) && g.isElectronic())
+{
+result++;
+}
+}
+return result;
+}
   
   /** Returns true if any pair of adjacent purchased Gizmo objects are
   * equivalent, and false otherwise, as described in part (b).
